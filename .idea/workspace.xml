@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76bea028-c794-4094-b0a5-b5b7a90e443b" name="Changes" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="76bea028-c794-4094-b0a5-b5b7a90e443b" name="Changes" comment="lab 3 report" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +57,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "lab3",
-    "last_opened_file_path": "C:/TRPZ/InstallGenerator",
+    "last_opened_file_path": "C:/TRPZ",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,6 +87,7 @@
       <workItem from="1731081824869" duration="94000" />
       <workItem from="1731081920325" duration="329000" />
       <workItem from="1731745519238" duration="17000" />
+      <workItem from="1732889406498" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -154,7 +153,31 @@
       <option name="project" value="LOCAL" />
       <updated>1731082069919</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1732889590445</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732889590445</updated>
+    </task>
+    <task id="LOCAL-00010" summary="deleted previous report">
+      <option name="closed" value="true" />
+      <created>1732889623819</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732889623820</updated>
+    </task>
+    <task id="LOCAL-00011" summary="lab 3 report">
+      <option name="closed" value="true" />
+      <created>1732889675687</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732889675687</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +194,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="lab_2" />
+                        <option value="origin/lab_2" />
                       </list>
                     </value>
                   </entry>
@@ -189,6 +212,8 @@
     <MESSAGE value="lab 2" />
     <MESSAGE value="lab 3" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="deleted previous report" />
+    <MESSAGE value="lab 3 report" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab 3 report" />
   </component>
 </project>
