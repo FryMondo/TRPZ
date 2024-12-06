@@ -1,7 +1,7 @@
 from Methods.CheckLicence import checkLicence
 from Methods.CreateFile import createFile
 from Methods.CreateShortCut import createShortCut
-from Methods.DeinstallFile import deinstallFile
+from Methods.UninstallFile import uninstallFile
 from Methods.LanguageSelect import languageSelect
 
 
@@ -18,8 +18,8 @@ class Installer:
     def create_shortcut(self):
         createShortCut()
 
-    def deinstall_file(self):
-        deinstallFile()
+    def uninstall_file(self):
+        uninstallFile()
 
     def language_select(self):
         languageSelect()
