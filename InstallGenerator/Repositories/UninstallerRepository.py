@@ -1,7 +1,7 @@
-class DeinstallatorRepository:
+class UninstallerRepository:
     def __init__(self, directory_repo):
         self.id = None
-        self.deinstallator_name = None
+        self.uninstaller_name = None
         self.directory_repo = directory_repo
 
     def save(self):
