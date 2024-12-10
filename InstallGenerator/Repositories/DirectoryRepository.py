@@ -1,10 +1,17 @@
 class DirectoryRepository:
     def __init__(self):
-        self.id = None
+        self.id = 0
         self.path = None
+        self.directories = []
 
-    def save(self):
-        pass
+    def add_path(self, path):
+        self.id += 1
+        self.path = path
+        directory = {
+            "id": self.id,
+            "path": self.path,
+        }
+        self.directories.append(directory)
 
-    def get(self, directory_id):
-        pass
+    def get_path(self, id):
+        return self.directories[id]["path"]
