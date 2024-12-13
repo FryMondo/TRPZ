@@ -4,20 +4,20 @@ class FileRepository:
     def __init__(self):
         self.id = 0
         self.file_name = None
-        self.directory_repository = None
+        self.path = None
         self.file_type = None
         self.files = []
 
-    def add_file(self, file_name, path, file_type):
+    def add_file(self, files):
         self.id += 1
-        self.file_name = file_name
-        self.directory_repository = path
-        self.file_type = file_type
+        self.file_name = files["file_name"]
+        self.path = files["file_path"]
+        self.file_type = files["file_type"]
         file = {
             "id": self.id,
-            "file_name": file_name,
-            "file_path": path,
-            "file_type": file_type
+            "file_name": self.file_name,
+            "file_path": self.path,
+            "file_type": self.file_type
         }
         self.files.append(file)
 
