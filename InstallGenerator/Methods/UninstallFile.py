@@ -1,3 +1,3 @@
-def deinstallFile():
+def uninstallFile():
     # Метод для видалення встановленого файлу та деінсталятора
     pass
