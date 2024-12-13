@@ -19,8 +19,8 @@ class Installer:
     def check_licence(self):
         checkLicence()
 
-    def create_file(self):
-        createFile()
+    def create_file(self, file_name, path, file_type):
+        createFile(self._installer_repository.get_file_repo(), file_name, path, file_type)
 
     def create_shortcut(self):
         createShortCut()
@@ -47,12 +47,12 @@ if __name__ == "__main__":
     # Додавання шляху
     installer_repo.get_directory_repo().add_path('C:/')
 
-    # Додавання файлів у репозиторій
-    installer_repo.get_file_repo().add_file("file", installer_repo.get_directory_repo().get_path(0), ".exe")
-    installer_repo.get_file_repo().add_file("readme", installer_repo.get_directory_repo().get_path(0), ".txt")
-
     # Створення інсталятора
     installer = Installer(installer_repo)
+
+    # Додавання файлів у репозиторій
+    installer.create_file("readme", installer_repo.get_directory_repo().get_path(0), ".txt")
+    installer.create_file("installer", installer_repo.get_directory_repo().get_path(0), ".exe")
 
     # Перевірка встановлених файлів
     installer.check_installed_files()
