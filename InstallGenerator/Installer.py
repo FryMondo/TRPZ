@@ -1,7 +1,7 @@
 from InstallGenerator.Methods.CreateFile import createFile
 from InstallGenerator.Methods.CheckInstalledFiles import check_installed_files
 from InstallGenerator.Methods.CheckLicence import checkLicence
-from InstallGenerator.Methods.CreateShortCut import createShortCut
+from InstallGenerator.Methods.CreateShortcut import createShortcut
 from InstallGenerator.Methods.LanguageSelect import languageSelect
 from InstallGenerator.Methods.UninstallFile import uninstallFile
 
@@ -22,8 +22,8 @@ class Installer:
     def create_file(self, file_name, path, file_type):
         createFile(self._installer_repository.get_file_repo(), file_name, path, file_type)
 
-    def create_shortcut(self):
-        createShortCut()
+    def create_shortcut(self, shortcut_name, shortcut_path):
+        createShortcut(shortcut_name, shortcut_path)
 
     def uninstall_file(self):
         uninstallFile()
@@ -46,6 +46,7 @@ if __name__ == "__main__":
 
     # Додавання шляху
     installer_repo.get_directory_repo().add_path('C:/')
+    installer_repo.get_directory_repo().add_path('C:/Users/Username/Desktop')
 
     # Створення інсталятора
     installer = Installer(installer_repo)
@@ -56,3 +57,6 @@ if __name__ == "__main__":
 
     # Перевірка встановлених файлів
     installer.check_installed_files()
+
+    # Створення ярлика
+    installer.create_shortcut("File", installer_repo.get_directory_repo().get_path(1))
