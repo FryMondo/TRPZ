@@ -1,10 +1,11 @@
 class LanguageRepository:
     def __init__(self):
         self.id = None
-        self.language = "English"
+        self.language_eng = "English"
+        self.language_ukr = "Українська"
 
-    def save(self):
-        pass
+    def getEnglish(self):
+        return self.language_eng
 
-    def getLanguage(self):
-        pass
+    def getUkrainian(self):
+        return self.language_ukr
