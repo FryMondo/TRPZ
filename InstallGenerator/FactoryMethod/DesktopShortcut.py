@@ -1,4 +1,5 @@
 from InstallGenerator.FactoryMethod.Shortcut import Shortcut
+from InstallGenerator.Methods.LanguageSelect import get_language
 
 class DesktopShortcut(Shortcut):
     def __init__(self, name, path):
@@ -6,5 +7,4 @@ class DesktopShortcut(Shortcut):
         self.path = path
 
     def create(self):
-        print(f"Creating shortcut...")
-        print(f"Shortcut '{self.name}' created in '{self.path}'")
+        print(get_language().get_message("shortcut_created", name=self.name, path=self.path))
