@@ -4,6 +4,7 @@ from InstallGenerator.Methods.CheckLicence import checkLicence
 from InstallGenerator.Methods.CreateShortcut import createShortcut
 from InstallGenerator.Methods.LanguageSelect import languageSelect
 from InstallGenerator.Methods.UninstallFile import uninstallFile
+from InstallGenerator.Methods.LanguageSelect import set_language
 
 from InstallGenerator.Repositories.FileRepository import FileRepository
 from InstallGenerator.Repositories.DirectoryRepository import DirectoryRepository
@@ -28,8 +29,8 @@ class Installer:
     def uninstall_file(self):
         uninstallFile()
 
-    def language_select(self):
-        languageSelect()
+    def language_select(self, language):
+        set_language(languageSelect(language))
 
     def check_installed_files(self):
         check_installed_files(self._installer_repository.get_file_repo())
@@ -44,12 +45,16 @@ if __name__ == "__main__":
                                          LanguageRepository(),
                                          UninstallerRepository(DirectoryRepository))
 
+    # Створення інсталятора
+    installer = Installer(installer_repo)
+
+    # Вибір мови
+    language_repo = installer_repo.get_language_repo()
+    selected_language = installer.language_select(language_repo.getUkrainian())
+
     # Додавання шляху
     installer_repo.get_directory_repo().add_path('C:/')
     installer_repo.get_directory_repo().add_path('C:/Users/Username/Desktop')
-
-    # Створення інсталятора
-    installer = Installer(installer_repo)
 
     # Додавання файлів у репозиторій
     installer.create_file("readme", installer_repo.get_directory_repo().get_path(0), ".txt")
